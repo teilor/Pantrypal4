@@ -8,6 +8,7 @@ object Constants {
 
     const val TABLE_NAME = "ALIMENTOS"
     //colunas tabela
+    const val C_ID = "ID"
     const val C_FOTO = "FOTO"
     const val C_NOME = "NOME"
     const val C_DATA_CRIADO = "DATA_CRIADO"
@@ -17,15 +18,16 @@ object Constants {
     const val C_QUANTIDADE = "QUANTIDADE"
     const val C_DATA_DELETE = "DATA_DELETE"
 
-    const val CREATE_TABLE = ("CREATE TABLE" + TABLE_NAME + "("
+    const val CREATE_TABLE = ("CREATE TABLE " + TABLE_NAME + "("
+            + C_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + C_NOME + " TEXT,"
             + C_FOTO + " TEXT,"
             + C_DATA_CRIADO + " TEXT,"
-            + C_DATA_DIAS + " TEXT,"
+            + C_DATA_DIAS + " INTEGER,"
             + C_LOCAL + " TEXT,"
             + C_REFEICAO + " TEXT,"
-            + C_QUANTIDADE + " TEXT,"
-            + C_DATA_DELETE + " TEXT,"
+            + C_QUANTIDADE + " INTEGER,"
+            + C_DATA_DELETE + " TEXT"
             + ");")
 
 
